@@ -1,3 +1,5 @@
+![LazyEgg](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*XGpY9xrxO-u8UanwHUBFUw.jpeg)
+
 # LazyEgg
 LazyEgg is a powerful tool for extracting various types of data from a target URL. It can extract links, images, cookies, forms, JavaScript URLs, localStorage, Host, IP, and leaked credentials. Additionally, it includes a Chrome extension to log real-time JavaScript files as they are loaded.
 
