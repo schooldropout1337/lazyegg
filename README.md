@@ -42,11 +42,13 @@ To scan multiple JavaScript files, use a text file containing URLs of the JS fil
 
 
 # Chrome Extension
-LazyEgg includes a Chrome extension that logs real-time JavaScript files loaded by the browser. To install the extension:
+LazyEgg includes a Chrome extension that logs real-time JavaScript files loaded by the browser. 
 
-Open Chrome and navigate to chrome://extensions/.
-Enable "Developer mode" using the toggle switch.
-Click "Load unpacked" and select the chrome_extension directory from the LazyEgg repository.
+# To install the extension:
+
+1. Open Chrome and navigate to chrome://extensions/.
+2. Enable "Developer mode" using the toggle switch.
+3. Click "Load unpacked" and select the chrome_extension directory from the LazyEgg repository.
 
 # Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
