@@ -15,7 +15,7 @@ Includes a Chrome extension for real-time logging of JS files.
 To install LazyEgg, clone the repository and navigate to the project directory:
 
 ```
-git clone https://github.com/yourusername/lazyegg.git
+git clone https://github.com/schooldropout1337/lazyegg.git
 ```
 
 ```
