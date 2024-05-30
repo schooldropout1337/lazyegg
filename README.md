@@ -14,15 +14,21 @@ Includes a Chrome extension for real-time logging of JS files.
 # Installation
 To install LazyEgg, clone the repository and navigate to the project directory:
 
-``git clone https://github.com/yourusername/lazyegg.git``
+```
+git clone https://github.com/yourusername/lazyegg.git
+```
 
-``cd lazyegg``
+```
+cd lazyegg
+```
 
 # Usage
 # General Options
 To view the available options for LazyEgg, use the -h flag:
 
-``python lazyegg.py -h``
+```
+python lazyegg.py -h
+```
 
 ![](le-01.jpg)
 
@@ -30,26 +36,34 @@ To view the available options for LazyEgg, use the -h flag:
 # Launch a Scan
 To launch a scan on a target URL:
 
-``python lazyegg.py http://localhost:8080``
+```
+python lazyegg.py http://localhost:8080
+```
 
 ![](le-02.jpg)
 
 # Find Hidden Files
 To find hidden files, such as JavaScript files, using a wordlist:
 
-``python lazyegg.py http://localhost:8080/js --js_scan --w wordlist.txt``
+```
+python lazyegg.py http://localhost:8080/js --js_scan --w wordlist.txt
+```
 
 # Scan a Single JavaScript File
 To scan a single JavaScript file for data:
 
-``python lazyegg.py http://localhost:8080/js/auth.js``
+```
+python lazyegg.py http://localhost:8080/js/auth.js
+```
 
 ![](le-03.jpg)
 
 # Scan Multiple JavaScript Files
 To scan multiple JavaScript files, use a text file containing URLs of the JS files and process them with xargs:
 
-``cat jsurls.txt | xargs -I{} bash -c 'echo -e "\ntarget : {}\n" && python lazyegg.py "{}" --js_urls --domains --ips --leaked_creds'``
+```
+cat jsurls.txt | xargs -I{} bash -c 'echo -e "\ntarget : {}\n" && python lazyegg.py "{}" --js_urls --domains --ips --leaked_creds'
+```
 
 ![](le-05.jpg)
 
