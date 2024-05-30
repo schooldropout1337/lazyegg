@@ -12,3 +12,16 @@ To install LazyEgg, clone the repository and navigate to the project directory:
 ``git clone https://github.com/yourusername/lazyegg.git``
 
 ``cd lazyegg``
+
+# Usage
+# General Options
+To view the available options for LazyEgg, use the -h flag:
+
+``python lazyegg.py -h``
+
+
+# Launch a Scan
+To launch a scan on a target URL:
+
+``python lazyegg.py http://localhost:8080``
+
