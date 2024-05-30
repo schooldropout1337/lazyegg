@@ -3,6 +3,9 @@
 # LazyEgg
 LazyEgg is a powerful tool for extracting various types of data from a target URL. It can extract links, images, cookies, forms, JavaScript URLs, localStorage, Host, IP, and leaked credentials. Additionally, it includes a Chrome extension to log real-time JavaScript files as they are loaded.
 
+# Javascript Web Security - EggShop Misconfiguration
+https://medium.com/@angryovalegg/javascript-web-security-lazyegg-9bf2c234b6e2
+
 # Features
 Extracts links, images, cookies, forms, JS URLs, localStorage, Host, IP, and leaked credentials.
 Supports scanning single or multiple JavaScript files.
@@ -64,3 +67,7 @@ LazyEgg includes a Chrome extension that logs real-time JavaScript files loaded 
 
 # Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+# Alice & Bob's Adventure in EggShop
+
+https://medium.com/@angryovalegg/javascript-web-security-lazyegg-9bf2c234b6e2
