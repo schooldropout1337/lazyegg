@@ -70,6 +70,7 @@ cat jsurls.txt | xargs -I{} bash -c 'echo -e "\ntarget : {}\n" && python lazyegg
 
 # Chrome Extension
 LazyEgg includes a Chrome extension that logs real-time JavaScript files loaded by the browser. 
+It captures the difference in JavaScript files loaded for unauthenticated and authenticated users. When a user logs in, additional JavaScript files specific to the authenticated user are loaded. This allows you to see how the JavaScript environment changes upon authentication, providing insight into the dynamic content and functionality provided to logged-in users.
 
 ![](le-04.jpg)
 
