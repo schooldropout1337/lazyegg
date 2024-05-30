@@ -21,11 +21,15 @@ To view the available options for LazyEgg, use the -h flag:
 
 ``python lazyegg.py -h``
 
+![](le-01.jpg)
+
 
 # Launch a Scan
 To launch a scan on a target URL:
 
 ``python lazyegg.py http://localhost:8080``
+
+![](le-02.jpg)
 
 # Find Hidden Files
 To find hidden files, such as JavaScript files, using a wordlist:
@@ -37,14 +41,20 @@ To scan a single JavaScript file for data:
 
 ``python lazyegg.py http://localhost:8080/js/auth.js``
 
+![](le-03.jpg)
+
 # Scan Multiple JavaScript Files
 To scan multiple JavaScript files, use a text file containing URLs of the JS files and process them with xargs:
 
 ``cat jsurls.txt | xargs -I{} bash -c 'echo -e "\ntarget : {}\n" && python lazyegg.py "{}" --js_urls --domains --ips --leaked_creds'``
 
+![](le-05.jpg)
+
 
 # Chrome Extension
 LazyEgg includes a Chrome extension that logs real-time JavaScript files loaded by the browser. 
+
+![](le-04.jpg)
 
 # To install the extension:
 
