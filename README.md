@@ -67,6 +67,14 @@ cat jsurls.txt | xargs -I{} bash -c 'echo -e "\ntarget : {}\n" && python lazyegg
 
 ![](le-05.jpg)
 
+# Waybackurls - JS Recon for IP, Hostname & URL
+
+```
+waybackurls vulnweb.com | grep '\.js$' | awk -F '?' '{print $1}' | sort -u | xargs -I{} bash -c 'python lazyegg.py "{}" --js_urls --domains --ips' > jsurls.log && cat jsurls.log | grep '\.' | sort -u
+```
+
+![](le-06.jpg)
+
 
 # Chrome Extension
 LazyEgg includes a Chrome extension that logs real-time JavaScript files loaded by the browser. 
