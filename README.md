@@ -82,6 +82,8 @@ It captures the difference in JavaScript files loaded for unauthenticated and au
 
 ![](le-04.jpg)
 
+![](le-07.gif)
+
 # To install the extension:
 
 1. Open Chrome and navigate to chrome://extensions/.
