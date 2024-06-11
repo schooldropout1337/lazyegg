@@ -1,0 +1,75 @@
+### Overview of LazyEgg
+
+LazyEgg is a Python tool designed to extract various data from a given URL, such as links, images, cookies, forms, JavaScript URLs, domains, IP addresses, leaked credentials, and more. It can also perform port scans and scan JavaScript files for potential issues.
+
+### Functions of LazyEgg
+
+- **Links Extraction**: Extracts all hyperlinks from a web page.
+- **Images Extraction**: Extracts all image URLs from a web page.
+- **Cookies Extraction**: Extracts cookies set by the server and those set via JavaScript.
+- **Forms Extraction**: Extracts forms and their input fields from a web page.
+- **JavaScript URLs Extraction**: Identifies and extracts URLs within JavaScript files.
+- **Domains Extraction**: Extracts domains and subdomains found in JavaScript files.
+- **IPs Extraction**: Extracts IP addresses found in JavaScript files.
+- **Leaked Credentials Extraction**: Detects potential leaked credentials in JavaScript files.
+- **Local Storage Extraction**: Extracts local storage entries from JavaScript.
+- **Custom Regex Extraction**: Allows extraction based on custom regular expressions.
+- **Port Scanning**: Checks for open ports on the target server.
+- **JavaScript Scanning**: Scans JavaScript files against a wordlist to identify accessible endpoints.
+
+### How to Use LazyEgg
+
+1. **Basic Command**:
+   
+   python lazyegg.py <url> [options]
+  
+   Example:
+   
+   python lazyegg.py http://example.com --links --images --cookies
+   
+
+2. **Options**:
+   - `--links`: Extract links.
+   - `--images`: Extract images.
+   - `--cookies`: Extract cookies.
+   - `--forms`: Extract forms.
+   - `--js_urls`: Extract JavaScript URLs.
+   - `--domains`: Extract domains.
+   - `--ips`: Extract IP addresses.
+   - `--leaked_creds`: Extract leaked credentials.
+   - `--local_storage`: Extract local storage entries.
+   - `--oxregex`: Extract custom patterns.
+   - `--portscan`: Perform a port scan.
+   - `--js_scan`: Scan JavaScript files using a wordlist.
+   - `-H "key: value"`: Add custom headers.
+
+### Special Tips and Advanced Usage
+
+#### Integrating with Third-Party Tools
+
+1. **Extract and Process JavaScript URLs**:
+   
+   waybackurls target | grep '\.js$' | awk -F '?' '{print $1}' | sort -u | xargs -I{} bash -c 'python lazyegg.py "{}" --js_urls --domains --ips' > jsurls && cat jsurls | grep '\.' | sort -u
+  
+
+2. **Extract, Process, and Validate with `httpx`**:
+   
+   waybackurls target | grep '\.js$' | awk -F '?' '{print $1}' | sort -u | xargs -I{} python lazyegg.py "{}" --js_urls --domains --ips > jsurls && cat jsurls | grep '\.' | sort -u | xargs -I{} httpx -silent -u {} -sc -title -td
+   
+
+#### Bypassing Server Security with User Agent
+
+
+python lazyegg.py target/app.js -H 'user-agent: a valid user agent' --js_urls --domains --leaked_creds --oxregex
+
+
+#### Extracting Endpoints from Dynamic Apps
+
+1. **Load Chrome Extension**: Load the `le-jsurls.zip` Chrome extension.
+2. **Login and Download `jsurls.txt`**: Use the app and extract URLs.
+3. **Process Extracted URLs**:
+   ```bash
+   cat jsurls.txt | xargs -I{} bash -c 'echo -e "\ntarget : {}\n" && python lazyegg.py "{}" --js_urls --domains --ips --leaked_creds --local_storage'
+   ```
+
+These commands integrate LazyEgg with other tools to enhance its functionality, streamline workflows, and improve the extraction and validation of web data.
