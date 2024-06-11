@@ -2,6 +2,8 @@
 
 LazyEgg is a Python tool designed to extract various data from a given URL, such as links, images, cookies, forms, JavaScript URLs, domains, IP addresses, leaked credentials, and more. It can also perform port scans and scan JavaScript files for potential issues.
 
+Download : https://lazyegg.gudetama.cf
+
 ### Functions of LazyEgg
 
 - **Links Extraction**: Extracts all hyperlinks from a web page.
