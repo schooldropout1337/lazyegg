@@ -68,8 +68,8 @@ python lazyegg.py target/app.js -H 'user-agent: a valid user agent' --js_urls --
 1. **Load Chrome Extension**: Load the `le-jsurls.zip` Chrome extension.
 2. **Login and Download `jsurls.txt`**: Use the app and extract URLs.
 3. **Process Extracted URLs**:
-   ```bash
+
    cat jsurls.txt | xargs -I{} bash -c 'echo -e "\ntarget : {}\n" && python lazyegg.py "{}" --js_urls --domains --ips --leaked_creds --local_storage'
-   ```
+   
 
 These commands integrate LazyEgg with other tools to enhance its functionality, streamline workflows, and improve the extraction and validation of web data.
